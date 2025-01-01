@@ -3,8 +3,9 @@ const app = express()
 const morgan = require('morgan');
 const cors = require('cors')
 
+app.use(express.static('dist'));
 app.use(cors({
-  origin: 'http://localhost:5173' // Only allowed for front-end
+  // origin: 'http://localhost:5173' // Only allowed for front-end
 }))
 
 app.use(express.json())
